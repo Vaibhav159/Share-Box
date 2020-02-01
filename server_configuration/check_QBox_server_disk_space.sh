@@ -12,7 +12,8 @@ requiredDiskSpaceInMB=4096     # 4 GB Disk Space
     #    Note that the filesystem name may be different on different servers, using that name may not work on all servers.
     #    Note that the Disk Space mounted at "/" is the disk space available for QBox.
     # 2) Execute the script before submission and confirm the output
-
+m=$(df  /dev/nvme1n1p1 --output=avail|tail -n 1)
+diskSpaceInMB=$(expr $((m / 1024)))
 if test $diskSpaceInMB -ge $requiredDiskSpaceInMB
    then
    echo "Free Disk Space of $diskSpaceInMB MB is sufficient for QBox"

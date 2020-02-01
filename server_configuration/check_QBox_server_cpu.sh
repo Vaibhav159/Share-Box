@@ -20,7 +20,8 @@ requiredCPUSpeedInMHz=1000     # 1 GHz
     # 2) Start the expression to populate the variable with "cat $1" which is the command line filename input. Check the Usage above. 
     # 3) Bash script can only do integer arithmetic. Include additional handling needed to strip the decimal part
     # 4) Execute the script before submission and confirm the output 
-
+var=$(cat /proc/cpuinfo|awk '/^cpu MHz/{print $4}'|head -n 1)
+cpuSpeedInMHz=$(printf %.0f $var)
 if test $cpuSpeedInMHz -ge $requiredCPUSpeedInMHz
    then
    echo "CPU Speed of $cpuSpeedInMHz MHz is sufficient for QBox"
