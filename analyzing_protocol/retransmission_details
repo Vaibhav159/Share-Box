@@ -1,0 +1,2 @@
+1928, 1931, 1934, 1936, 1940, 1941, 1942
+Retransmission occurs when the acknowledgment of the packet is lost or the packet gets lost , in that case the sender retrasmit the packet

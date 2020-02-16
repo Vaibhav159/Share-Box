@@ -1,0 +1,1 @@
+Initally as the tcp connection is tried to be establised from handshaking ,the syn is set to 1 and the server returns syn =1 and ack=1 and to which client returns ack=1 and syn=0 to finish handshaking

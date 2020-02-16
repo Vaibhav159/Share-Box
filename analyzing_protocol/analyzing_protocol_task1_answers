@@ -1,0 +1,4 @@
+Network layer
+Yes
+Yes
+We can the the number of packets sent and recieved ,lost %,size of data in each packet,time taken to complete a round trip and time to leave,with min,max and avg time of all packets.

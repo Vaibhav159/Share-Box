@@ -1,0 +1,3 @@
+814
+14.142.204.195
+Duplicate acks are used as a part of fast retransmission and packet recovery. Generally, if tcp timer expires , it is assumed that the packet is lost and tcp retransmits the same packet. But it need to wait, until the timer expires. As a part of congestion control techniques, TCP behaves very politely during the times of congestion by increasing the timer interval by 2 times , so that the packet would be retransmitted slowing , thus not contributing to congestion. However timeout increases exponentially assuming packet is lost every time it sends.
